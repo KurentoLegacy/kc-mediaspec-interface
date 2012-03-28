@@ -42,6 +42,6 @@ add_library(mediaspec ${ALL_CPP_SRCS} ${DUMMY_FILE} ${GEN_THRIFT})
 include_directories(mediaspec ${THRIFT_INCLUDE_DIRS})
 target_link_libraries(mediaspec ${THRIFT_LIBRARIES})
 
-add_dependencies(mediaspec GenerateThrift)
+add_dependencies(mediaspec ${GEN_THRIFT})
 
 # TODO generate rules to install library and generated headers
