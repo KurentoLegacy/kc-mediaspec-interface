@@ -6,42 +6,56 @@ find_package(PkgConfig)
 
 pkg_check_modules(THRIFT REQUIRED thrift>=0.8.0)
 
-set(GEN_THRIFT GenerateThrift)
+set(THRIFT_FILES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/main/thrift)
+set(GEN_FILES_DIR ${CMAKE_BINARY_DIR}/gen-cpp)
+FILE(MAKE_DIRECTORY ${GEN_FILES_DIR})
 
-set(THRIFT_FILE ${CMAKE_CURRENT_SOURCE_DIR}/src/main/thrift/sessionSpec.thrift)
+FILE(GLOB THRIFT_FILES ${THRIFT_FILES_DIR}/*.thrift)
 
-# TODO this should depend (and optionally execute) for all thrift files
-add_custom_command(
-	OUTPUT		${GEN_THRIFT}
+find_program(THRIFT_EXEC thrift)
 
-	DEPENDS		${THRIFT_FILE}
-	COMMENT		"thrift2cpp"
+IF(NOT EXISTS ${THRIFT_EXEC})
+	MESSAGE(FATAL_ERROR "Thrift not foud")
+ENDIF(NOT EXISTS ${THRIFT_EXEC})
 
-	COMMAND		thrift
-	ARGS		-r --gen cpp -o ${CMAKE_BINARY_DIR}
-			${THRIFT_FILE}
+MESSAGE(STATUS "Trift found: ${THRIFT_EXEC}")
 
-	# Next command forces cmake to re-create Makefiles this way GLOB will
-	# work and get all generated files
-	COMMAND		rm
-	ARGS		${CMAKE_BINARY_DIR}/CMakeFiles/Makefile.cmake
+FOREACH(THRIFT_FILE ${THRIFT_FILES})
+	MESSAGE(STATUS "Processing file: " ${THRIFT_FILE})
 
-	COMMAND		touch
-	ARGS		${GEN_THRIFT}
+	SET(CUR_GEN_CPP_FILES "")
+	STRING(REGEX REPLACE ".thrift\$" "_types.cpp" CPP_FILE "${THRIFT_FILE}")
+	STRING(REGEX REPLACE "${THRIFT_FILES_DIR}" "${GEN_FILES_DIR}" CPP_FILE "${CPP_FILE}")
+	SET(CUR_GEN_CPP_FILES ${CUR_GEN_CPP_FILES} ${CPP_FILE})
+	STRING(REGEX REPLACE ".thrift\$" "_constants.cpp" CPP_FILE "${THRIFT_FILE}")
+	STRING(REGEX REPLACE "${THRIFT_FILES_DIR}" "${GEN_FILES_DIR}" CPP_FILE "${CPP_FILE}")
+	SET(CUR_GEN_CPP_FILES ${CUR_GEN_CPP_FILES} "${CPP_FILE}")
 
-	COMMAND		make
-)
+	STRING(REGEX REPLACE ".thrift\$" "_types.h" H_FILE "${THRIFT_FILE}")
+	STRING(REGEX REPLACE "${THRIFT_FILES_DIR}" "${GEN_FILES_DIR}" H_FILE "${H_FILE}")
+	SET(GEN_H_FILES ${GEN_H_FILES} ${H_FILE})
+	STRING(REGEX REPLACE ".thrift\$" "_constants.h" H_FILE "${THRIFT_FILE}")
+	STRING(REGEX REPLACE "${THRIFT_FILES_DIR}" "${GEN_FILES_DIR}" H_FILE "${H_FILE}")
+	SET(GEN_H_FILES ${GEN_H_FILES} "${H_FILE}")
 
-FILE(GLOB ALL_CPP_SRCS ${CMAKE_BINARY_DIR}/gen-cpp/*.cpp)
+	SET(GEN_CPP_FILES ${GEN_CPP_FILES} ${CUR_GEN_CPP_FILES})
 
-SET(DUMMY_FILE ${CMAKE_BINARY_DIR}/dummy.cpp)
-file(WRITE ${DUMMY_FILE})
+	FOREACH(CPP_FILE ${CUR_GEN_CPP_FILES})
+		ADD_CUSTOM_COMMAND(
+			COMMENT		"Generating source from: ${THRIFT_FILE}"
+			OUTPUT		"${CPP_FILE}"
 
-add_library(mediaspec ${ALL_CPP_SRCS} ${DUMMY_FILE} ${GEN_THRIFT})
+			DEPENDS		"${THRIFT_FILE}"
+
+			COMMAND		${THRIFT_EXEC}
+			ARGS		--gen cpp -out "${GEN_FILES_DIR}" "${THRIFT_FILE}"
+		)
+	ENDFOREACH(CPP_FILE)
+ENDFOREACH(THRIFT_FILE)
+
+add_library(mediaspec ${GEN_CPP_FILES})
 
 include_directories(mediaspec ${THRIFT_INCLUDE_DIRS})
 target_link_libraries(mediaspec ${THRIFT_LIBRARIES})
-
-add_dependencies(mediaspec ${GEN_THRIFT})
 
 # TODO generate rules to install library and generated headers
