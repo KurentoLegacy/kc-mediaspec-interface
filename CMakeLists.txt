@@ -21,9 +21,23 @@ ENDIF(NOT EXISTS ${THRIFT_EXEC})
 
 MESSAGE(STATUS "Trift found: ${THRIFT_EXEC}")
 
+function(get_base_name thrift_file out_base_name)
+	STRING(REGEX REPLACE "[/]+(([^/]+)[/]+)+(.*).thrift\$" "\\3" base_name "${thrift_file}")
+	SET(${out_base_name} ${base_name} PARENT_SCOPE)
+
+	if (NOT ${ARGV2} EQUAL "")
+		#Proccess the base name in camel case
+		STRING(SUBSTRING ${base_name} 0 1 head)
+		STRING(SUBSTRING ${base_name} 1 -1 tail)
+		STRING(TOUPPER ${head} upper_head)
+
+		SET(${ARGV2} "${upper_head}${tail}" PARENT_SCOPE)
+	endif(NOT ${ARGV2} EQUAL "")
+endfunction(get_base_name)
+
 FOREACH(THRIFT_FILE ${THRIFT_FILES})
 	SET(CUR_GEN_CPP_FILES "")
-	STRING(REGEX REPLACE "[/]+(([^/]+)[/]+)+(.*).thrift\$" "\\3" BASE_NAME "${THRIFT_FILE}")
+	get_base_name(${THRIFT_FILE} BASE_NAME)
 	MESSAGE(STATUS "Processing thrift file: ${BASE_NAME}.thrift")
 
 	SET(CPP_FILE "${GEN_FILES_DIR}/${BASE_NAME}_types.cpp")
