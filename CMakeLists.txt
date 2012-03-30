@@ -21,24 +21,26 @@ ENDIF(NOT EXISTS ${THRIFT_EXEC})
 MESSAGE(STATUS "Trift found: ${THRIFT_EXEC}")
 
 FOREACH(THRIFT_FILE ${THRIFT_FILES})
-	MESSAGE(STATUS "Processing file: " ${THRIFT_FILE})
-
 	SET(CUR_GEN_CPP_FILES "")
-	STRING(REGEX REPLACE "/(([^/]+)/)+(.*).thrift\$" "${GEN_FILES_DIR}/\\3_types.cpp" CPP_FILE "${THRIFT_FILE}")
+	STRING(REGEX REPLACE "[/]+(([^/]+)[/]+)+(.*).thrift\$" "\\3" BASE_NAME "${THRIFT_FILE}")
+	MESSAGE(STATUS "Processing thrift file: ${BASE_NAME}.thrift")
+
+	SET(CPP_FILE "${GEN_FILES_DIR}/${BASE_NAME}_types.cpp")
 	SET(CUR_GEN_CPP_FILES ${CUR_GEN_CPP_FILES} ${CPP_FILE})
-	STRING(REGEX REPLACE "/(([^/]+)/)+(.*).thrift\$" "${GEN_FILES_DIR}/\\3_constants.cpp" CPP_FILE "${THRIFT_FILE}")
+	SET(CPP_FILE "${GEN_FILES_DIR}/${BASE_NAME}_constants.cpp")
 	SET(CUR_GEN_CPP_FILES ${CUR_GEN_CPP_FILES} "${CPP_FILE}")
 
-	STRING(REGEX REPLACE "/(([^/]+)/)+(.*).thrift\$" "${GEN_FILES_DIR}/\\3_types.h" H_FILE "${THRIFT_FILE}")
+	SET(HFILE "${GEN_FILES_DIR}/${BASE_NAME}_types.h")
 	SET(GEN_H_FILES ${GEN_H_FILES} ${H_FILE})
-	STRING(REGEX REPLACE "/(([^/]+)/)+(.*).thrift\$" "${GEN_FILES_DIR}/\\3_constants.h" H_FILE "${THRIFT_FILE}")
+	SET(HFILE "${GEN_FILES_DIR}/${BASE_NAME}_constants.h")
 	SET(GEN_H_FILES ${GEN_H_FILES} "${H_FILE}")
 
 	SET(GEN_CPP_FILES ${GEN_CPP_FILES} ${CUR_GEN_CPP_FILES})
 
 	FOREACH(CPP_FILE ${CUR_GEN_CPP_FILES})
 		ADD_CUSTOM_COMMAND(
-			COMMENT		"Generating source from: ${THRIFT_FILE}"
+			COMMENT		"Generating source from: ${BASE_NAME}.thrift"
+
 			OUTPUT		"${CPP_FILE}"
 
 			DEPENDS		"${THRIFT_FILE}"
