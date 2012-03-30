@@ -71,5 +71,6 @@ add_library(mediaspec ${GEN_CPP_FILES})
 include_directories(mediaspec ${THRIFT_INCLUDE_DIRS})
 target_link_libraries(mediaspec ${THRIFT_LIBRARIES})
 
+INSTALL(FILES ${THRIFT_FILES} DESTINATION thrift)
 INSTALL(FILES ${GEN_H_FILES} DESTINATION include)
 INSTALL(TARGETS mediaspec ARCHIVE DESTINATION lib)
