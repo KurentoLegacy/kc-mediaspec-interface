@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -DHAVE_INTTYPES_H -std=c++0x")
 
 find_package(PkgConfig)
+find_package(EXPORT)
 
 pkg_check_modules(THRIFT REQUIRED thrift>=0.8.0)
 
@@ -66,11 +67,30 @@ FOREACH(THRIFT_FILE ${THRIFT_FILES})
 	ENDFOREACH(CPP_FILE)
 ENDFOREACH(THRIFT_FILE)
 
+SET(ALL_INCLUDES "${GEN_H_FILES}" "${THRIFT_FILES}")
+
 add_library(mediaspec ${GEN_CPP_FILES})
 
 include_directories(mediaspec ${THRIFT_INCLUDE_DIRS})
 target_link_libraries(mediaspec ${THRIFT_LIBRARIES})
 
-INSTALL(FILES ${THRIFT_FILES} DESTINATION thrift)
-INSTALL(FILES ${GEN_H_FILES} DESTINATION include)
-INSTALL(TARGETS mediaspec ARCHIVE DESTINATION lib)
+set_target_properties(mediaspec PROPERTIES
+	PUBLIC_HEADER	"${ALL_INCLUDES}"
+)
+
+EXPORT(
+	TARGETS mediaspec
+	FILE mediaspec-build.cmake
+)
+
+INSTALL(TARGETS mediaspec EXPORT mediaspec-install
+		ARCHIVE DESTINATION lib
+		PUBLIC_HEADER DESTINATION include
+)
+
+INSTALL(
+	EXPORT mediaspec-install
+	DESTINATION lib
+	FILE mediaspec-install.cmake
+	#PREFIX mediaspec-1.0.0-
+)
