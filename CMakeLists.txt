@@ -4,7 +4,6 @@ cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -DHAVE_INTTYPES_H -std=c++0x")
 
 find_package(PkgConfig)
-find_package(EXPORT)
 
 pkg_check_modules(THRIFT REQUIRED thrift>=0.8.0)
 
@@ -78,19 +77,7 @@ set_target_properties(mediaspec PROPERTIES
 	PUBLIC_HEADER	"${ALL_INCLUDES}"
 )
 
-EXPORT(
-	TARGETS mediaspec
-	FILE mediaspec-build.cmake
-)
-
-INSTALL(TARGETS mediaspec EXPORT mediaspec-install
+INSTALL(TARGETS mediaspec
 		ARCHIVE DESTINATION lib
 		PUBLIC_HEADER DESTINATION include
-)
-
-INSTALL(
-	EXPORT mediaspec-install
-	DESTINATION lib
-	FILE mediaspec-install.cmake
-	#PREFIX mediaspec-1.0.0-
 )
