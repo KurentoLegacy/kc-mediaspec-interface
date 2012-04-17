@@ -9,9 +9,9 @@ enum MediaType {
 }
 
 enum Direction {
-	SEND,
-	RECV,
-	SEND_RECV,
+	SENDONLY,
+	RECVONVLY,
+	SENDRECV,
 	INACTIVE,
 }
 
