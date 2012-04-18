@@ -1,3 +1,4 @@
+namespace c_glib Kms
 namespace * com.kurento.commons.mediaspec
 
 struct TransportRtp {
