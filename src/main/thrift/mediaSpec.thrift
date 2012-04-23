@@ -11,7 +11,7 @@ enum MediaType {
 
 enum Direction {
 	SENDONLY,
-	RECVONVLY,
+	RECVONLY,
 	SENDRECV,
 	INACTIVE,
 }
