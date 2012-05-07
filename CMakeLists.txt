@@ -9,6 +9,24 @@ find_package(PkgConfig)
 pkg_check_modules(THRIFT REQUIRED thrift>=0.8.0)
 pkg_check_modules(THRIFTC REQUIRED thrift_c_glib>=0.8.0)
 
+if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
+	execute_process(COMMAND git describe --abbrev=6 --tags --dirty --always
+			OUTPUT_VARIABLE MEDIASPEC_VERSION
+			OUTPUT_STRIP_TRAILING_WHITESPACE)
+	string(REGEX REPLACE "^kc-mediaspec-interface-(.*)" "\\1" MEDIASPEC_VERSION ${MEDIASPEC_VERSION})
+else(EXISTS "${CMAKE_SOURCE_DIR}/.git")
+	set(MEDIASPEC_MAJOR_VERSION 1)
+	set(MEDIASPEC_MINOR_VERSION 0)
+	set(MEDIASPEC_PATCH_VERSION 1-dev)
+	set(MEDIASPEC_VERSION
+		${MEDIASPEC_MAJOR_VERSION}.${MEDIASPEC_MINOR_VERSION}.${MEDIASPEC_PATCH_VERSION})
+endif(EXISTS "${CMAKE_SOURCE_DIR}/.git")
+
+CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mediaspec_config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/mediaspec_config.h)
+
+set(GEN_H_FILES mediaspec_config.h)
+set(GEN_HPP_FILES mediaspec_config.h)
+
 set(THRIFT_FILES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/main/thrift)
 set(GEN_CPP_FILES_DIR ${CMAKE_BINARY_DIR}/gen-cpp)
 FILE(MAKE_DIRECTORY ${GEN_CPP_FILES_DIR})
