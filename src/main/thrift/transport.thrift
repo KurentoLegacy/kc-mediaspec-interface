@@ -23,6 +23,13 @@ struct TransportRtp {
 	2: i32 port,
 }
 
+struct TransportRtmp {
+	1: string url,
+	2: optional string publish,
+	3: optional string play,
+}
+
 struct Transport {
 	1: optional TransportRtp rtp,
+	2: optional TransportRtmp rtmp,
 }
