@@ -24,8 +24,8 @@ endif(EXISTS "${CMAKE_SOURCE_DIR}/.git")
 
 CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mediaspec_config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/mediaspec_config.h)
 
-set(GEN_H_FILES mediaspec_config.h)
-set(GEN_HPP_FILES mediaspec_config.h)
+set(GEN_H_FILES ${CMAKE_CURRENT_BINARY_DIR}/mediaspec_config.h)
+set(GEN_HPP_FILES ${CMAKE_CURRENT_BINARY_DIR}/mediaspec_config.h)
 
 set(THRIFT_FILES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/main/thrift)
 set(GEN_CPP_FILES_DIR ${CMAKE_BINARY_DIR}/gen-cpp)
