@@ -18,6 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 namespace c_glib Kms
 namespace * com.kurento.commons.mediaspec
 
+struct Fraction {
+	1: required i32 num,
+	2: required i32 denom,
+}
+
 struct PayloadRtp {
 	1: required i32 id,
 	2: required string codecName,
@@ -27,6 +32,7 @@ struct PayloadRtp {
 	5: optional i32 width,
 	6: optional i32 height,
 	7: optional i32 bitrate,
+	8: optional Fraction framerate,
 
 	50: optional map<string, string> extraParams,
 }
