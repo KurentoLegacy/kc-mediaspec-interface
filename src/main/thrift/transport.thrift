@@ -24,7 +24,7 @@ struct TransportRtp {
 }
 
 struct TransportRtmp {
-	1: string url,
+	1: optional string url,
 	2: optional string publish,
 	3: optional string play,
 }
