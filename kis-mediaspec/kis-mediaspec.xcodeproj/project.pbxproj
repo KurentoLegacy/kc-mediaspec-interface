@@ -81,7 +81,6 @@
 /* Begin PBXFileReference section */
 		C103A142155A9AB6001472BD /* libkis-mediaspec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkis-mediaspec.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C103A145155A9AB6001472BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C103A149155A9AB6001472BD /* kis-mediaspec-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kis-mediaspec-Prefix.pch"; sourceTree = "<group>"; };
 		C103A156155A9D3B001472BD /* mediaSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediaSpec.thrift; sourceTree = "<group>"; };
 		C103A157155A9D3B001472BD /* payload.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.thrift; sourceTree = "<group>"; };
 		C103A158155A9D3B001472BD /* sessionSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sessionSpec.thrift; sourceTree = "<group>"; };
@@ -115,7 +114,6 @@
 				C1425466155BEED700D069BE /* thrift-ios.framework */,
 				C17DB56B155BC0B9008A3837 /* gen-cocoa */,
 				C103A155155A9D3B001472BD /* mediaspec-thrift */,
-				C103A147155A9AB6001472BD /* kis-mediaspec */,
 				C103A144155A9AB6001472BD /* Frameworks */,
 				C103A143155A9AB6001472BD /* Products */,
 			);
@@ -135,22 +133,6 @@
 				C103A145155A9AB6001472BD /* Foundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C103A147155A9AB6001472BD /* kis-mediaspec */ = {
-			isa = PBXGroup;
-			children = (
-				C103A148155A9AB6001472BD /* Supporting Files */,
-			);
-			path = "kis-mediaspec";
-			sourceTree = "<group>";
-		};
-		C103A148155A9AB6001472BD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C103A149155A9AB6001472BD /* kis-mediaspec-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C103A155155A9D3B001472BD /* mediaspec-thrift */ = {
@@ -401,8 +383,8 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
 				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kis-mediaspec/kis-mediaspec-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
@@ -417,8 +399,8 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
 				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kis-mediaspec/kis-mediaspec-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
