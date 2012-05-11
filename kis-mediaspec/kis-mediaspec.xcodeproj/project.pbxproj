@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C142546F155BF58D00D069BE /* thrift-ios-dependency */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C1425470155BF58D00D069BE /* Build configuration list for PBXAggregateTarget "thrift-ios-dependency" */;
+			buildPhases = (
+				C1425475155BF5A200D069BE /* Update source */,
+				C1425477155BF74300D069BE /* Build Static Lib */,
+				C1425478155BFA0E00D069BE /* Dist framework */,
+			);
+			dependencies = (
+			);
+			name = "thrift-ios-dependency";
+			productName = "thrift-ios-dependency";
+		};
+		C1425479155D0A1300D069BE /* kis-mediaspec-framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C142547A155D0A1300D069BE /* Build configuration list for PBXAggregateTarget "kis-mediaspec-framework" */;
+			buildPhases = (
+				C142547D155D0A9F00D069BE /* Build Static Lib */,
+				C142547E155D0ABA00D069BE /* Build Universal Framework */,
+				C142547F155D0B2600D069BE /* Copy Headers Files */,
+			);
+			dependencies = (
+			);
+			name = "kis-mediaspec-framework";
+			productName = "kis-mediaspec-framework";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
+		C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
+		C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
+		C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB570155BC0B9008A3837 /* sessionSpec.h */; };
+		C1425486155D0B3B00D069BE /* transport.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
+		C17DB574155BC0B9008A3837 /* mediaSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
+		C17DB575155BC0B9008A3837 /* mediaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB56D155BC0B9008A3837 /* mediaSpec.m */; };
+		C17DB576155BC0B9008A3837 /* payload.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
+		C17DB577155BC0B9008A3837 /* payload.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB56F155BC0B9008A3837 /* payload.m */; };
+		C17DB578155BC0B9008A3837 /* sessionSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB570155BC0B9008A3837 /* sessionSpec.h */; };
+		C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB571155BC0B9008A3837 /* sessionSpec.m */; };
+		C17DB57A155BC0B9008A3837 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
+		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1425473155BF59900D069BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C103A139155A9AB5001472BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C142546F155BF58D00D069BE;
+			remoteInfo = "thrift-ios-dependency";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C142547F155D0B2600D069BE /* Copy Headers Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */,
+				C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */,
+				C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */,
+				C1425486155D0B3B00D069BE /* transport.h in Copy Headers Files */,
+			);
+			name = "Copy Headers Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C103A142155A9AB6001472BD /* libkis-mediaspec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkis-mediaspec.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C103A145155A9AB6001472BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C103A149155A9AB6001472BD /* kis-mediaspec-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kis-mediaspec-Prefix.pch"; sourceTree = "<group>"; };
+		C103A156155A9D3B001472BD /* mediaSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mediaSpec.thrift; sourceTree = "<group>"; };
+		C103A157155A9D3B001472BD /* payload.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.thrift; sourceTree = "<group>"; };
+		C103A158155A9D3B001472BD /* sessionSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sessionSpec.thrift; sourceTree = "<group>"; };
+		C103A159155A9D3B001472BD /* transport.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = transport.thrift; sourceTree = "<group>"; };
+		C1425466155BEED700D069BE /* thrift-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "thrift-ios.framework"; path = "../../thrift-ios/build/Debug-iphoneuniversal/thrift-ios.framework"; sourceTree = "<group>"; };
+		C17DB56C155BC0B9008A3837 /* mediaSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediaSpec.h; sourceTree = "<group>"; };
+		C17DB56D155BC0B9008A3837 /* mediaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediaSpec.m; sourceTree = "<group>"; };
+		C17DB56E155BC0B9008A3837 /* payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payload.h; sourceTree = "<group>"; };
+		C17DB56F155BC0B9008A3837 /* payload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = payload.m; sourceTree = "<group>"; };
+		C17DB570155BC0B9008A3837 /* sessionSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sessionSpec.h; sourceTree = "<group>"; };
+		C17DB571155BC0B9008A3837 /* sessionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessionSpec.m; sourceTree = "<group>"; };
+		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
+		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C103A13F155A9AB6001472BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C103A137155A9AB5001472BD = {
+			isa = PBXGroup;
+			children = (
+				C1425466155BEED700D069BE /* thrift-ios.framework */,
+				C17DB56B155BC0B9008A3837 /* gen-cocoa */,
+				C103A155155A9D3B001472BD /* mediaspec-thrift */,
+				C103A147155A9AB6001472BD /* kis-mediaspec */,
+				C103A144155A9AB6001472BD /* Frameworks */,
+				C103A143155A9AB6001472BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C103A143155A9AB6001472BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C103A142155A9AB6001472BD /* libkis-mediaspec.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C103A144155A9AB6001472BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C103A145155A9AB6001472BD /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C103A147155A9AB6001472BD /* kis-mediaspec */ = {
+			isa = PBXGroup;
+			children = (
+				C103A148155A9AB6001472BD /* Supporting Files */,
+			);
+			path = "kis-mediaspec";
+			sourceTree = "<group>";
+		};
+		C103A148155A9AB6001472BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C103A149155A9AB6001472BD /* kis-mediaspec-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C103A155155A9D3B001472BD /* mediaspec-thrift */ = {
+			isa = PBXGroup;
+			children = (
+				C103A156155A9D3B001472BD /* mediaSpec.thrift */,
+				C103A157155A9D3B001472BD /* payload.thrift */,
+				C103A158155A9D3B001472BD /* sessionSpec.thrift */,
+				C103A159155A9D3B001472BD /* transport.thrift */,
+			);
+			name = "mediaspec-thrift";
+			path = ../src/main/thrift;
+			sourceTree = "<group>";
+		};
+		C17DB56B155BC0B9008A3837 /* gen-cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				C17DB56C155BC0B9008A3837 /* mediaSpec.h */,
+				C17DB56D155BC0B9008A3837 /* mediaSpec.m */,
+				C17DB56E155BC0B9008A3837 /* payload.h */,
+				C17DB56F155BC0B9008A3837 /* payload.m */,
+				C17DB570155BC0B9008A3837 /* sessionSpec.h */,
+				C17DB571155BC0B9008A3837 /* sessionSpec.m */,
+				C17DB572155BC0B9008A3837 /* transport.h */,
+				C17DB573155BC0B9008A3837 /* transport.m */,
+			);
+			path = "gen-cocoa";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C103A140155A9AB6001472BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17DB574155BC0B9008A3837 /* mediaSpec.h in Headers */,
+				C17DB576155BC0B9008A3837 /* payload.h in Headers */,
+				C17DB578155BC0B9008A3837 /* sessionSpec.h in Headers */,
+				C17DB57A155BC0B9008A3837 /* transport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C103A141155A9AB6001472BD /* kis-mediaspec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C103A14F155A9AB6001472BD /* Build configuration list for PBXNativeTarget "kis-mediaspec" */;
+			buildPhases = (
+				C103A1A2155BAF66001472BD /* Generate Stub Files from Thrift */,
+				C103A13E155A9AB6001472BD /* Sources */,
+				C103A13F155A9AB6001472BD /* Frameworks */,
+				C103A140155A9AB6001472BD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1425474155BF59900D069BE /* PBXTargetDependency */,
+			);
+			name = "kis-mediaspec";
+			productName = "kis-mediaspec";
+			productReference = C103A142155A9AB6001472BD /* libkis-mediaspec.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C103A139155A9AB5001472BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C103A13C155A9AB5001472BD /* Build configuration list for PBXProject "kis-mediaspec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C103A137155A9AB5001472BD;
+			productRefGroup = C103A143155A9AB6001472BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C142546F155BF58D00D069BE /* thrift-ios-dependency */,
+				C103A141155A9AB6001472BD /* kis-mediaspec */,
+				C1425479155D0A1300D069BE /* kis-mediaspec-framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C103A1A2155BAF66001472BD /* Generate Stub Files from Thrift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Stub Files from Thrift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=$PATH:/usr/local/bin\nfor f in ${PROJECT_DIR}/../src/main/thrift/*\ndo\n    thrift -gen cocoa $f\ndone";
+		};
+		C1425475155BF5A200D069BE /* Update source */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update source";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\ngit clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"";
+		};
+		C1425477155BF74300D069BE /* Build Static Lib */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Static Lib";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}/build/thrift-ios\nxcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework";
+		};
+		C1425478155BFA0E00D069BE /* Dist framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Dist framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p ${PROJECT_DIR}/dist\ncp -r ${PROJECT_DIR}/build/thrift-ios/build/Release-iphoneuniversal/thrift-ios.framework ${PROJECT_DIR}/dist";
+		};
+		C142547D155D0A9F00D069BE /* Build Static Lib */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Static Lib";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphonesimulator -target ${PROJECT_NAME} -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos -target ${PROJECT_NAME} -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos";
+		};
+		C142547E155D0ABA00D069BE /* Build Universal Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Universal Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C103A13E155A9AB6001472BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C17DB575155BC0B9008A3837 /* mediaSpec.m in Sources */,
+				C17DB577155BC0B9008A3837 /* payload.m in Sources */,
+				C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */,
+				C17DB57B155BC0B9008A3837 /* transport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1425474155BF59900D069BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C142546F155BF58D00D069BE /* thrift-ios-dependency */;
+			targetProxy = C1425473155BF59900D069BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C103A14D155A9AB6001472BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C103A14E155A9AB6001472BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C103A150155A9AB6001472BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/kis_mediaspec.dst;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kis-mediaspec/kis-mediaspec-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "kis-mediaspec";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C103A151155A9AB6001472BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/kis_mediaspec.dst;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kis-mediaspec/kis-mediaspec-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "kis-mediaspec";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		C1425471155BF58D00D069BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C1425472155BF58D00D069BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C142547B155D0A1300D069BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+			};
+			name = Debug;
+		};
+		C142547C155D0A1300D069BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C103A13C155A9AB5001472BD /* Build configuration list for PBXProject "kis-mediaspec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C103A14D155A9AB6001472BD /* Debug */,
+				C103A14E155A9AB6001472BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C103A14F155A9AB6001472BD /* Build configuration list for PBXNativeTarget "kis-mediaspec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C103A150155A9AB6001472BD /* Debug */,
+				C103A151155A9AB6001472BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1425470155BF58D00D069BE /* Build configuration list for PBXAggregateTarget "thrift-ios-dependency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1425471155BF58D00D069BE /* Debug */,
+				C1425472155BF58D00D069BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C142547A155D0A1300D069BE /* Build configuration list for PBXAggregateTarget "kis-mediaspec-framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C142547B155D0A1300D069BE /* Debug */,
+				C142547C155D0A1300D069BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C103A139155A9AB5001472BD /* Project object */;
+}
