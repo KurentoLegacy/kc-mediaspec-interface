@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'kis-mediaspec' target in the 'kis-mediaspec' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
