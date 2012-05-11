@@ -13,7 +13,6 @@
 			buildPhases = (
 				C1425475155BF5A200D069BE /* Update source */,
 				C1425477155BF74300D069BE /* Build Static Lib */,
-				C1425478155BFA0E00D069BE /* Dist framework */,
 			);
 			dependencies = (
 			);
@@ -65,8 +64,8 @@
 		C142547F155D0B2600D069BE /* Copy Headers Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstPath = "${PROJECT_DIR}/dist/${PRODUCT_NAME}.framework/Headers/";
+			dstSubfolderSpec = 0;
 			files = (
 				C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */,
 				C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */,
@@ -268,20 +267,6 @@
 			shellPath = /bin/sh;
 			shellScript = "cd ${PROJECT_DIR}/build/thrift-ios\nxcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework";
 		};
-		C1425478155BFA0E00D069BE /* Dist framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Dist framework";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p ${PROJECT_DIR}/dist\ncp -r ${PROJECT_DIR}/build/thrift-ios/build/Release-iphoneuniversal/thrift-ios.framework ${PROJECT_DIR}/dist";
-		};
 		C142547D155D0A9F00D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"";
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/dist\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -382,10 +367,10 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
 				SKIP_INSTALL = YES;
@@ -398,10 +383,10 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/dist";
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/dist/thrift-ios.framework/Headers";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
 				SKIP_INSTALL = YES;
@@ -426,14 +411,14 @@
 		C142547B155D0A1300D069BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = KisMediaSpec;
 			};
 			name = Debug;
 		};
 		C142547C155D0A1300D069BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = KisMediaSpec;
 			};
 			name = Release;
 		};
