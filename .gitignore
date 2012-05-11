@@ -4,3 +4,9 @@
 target
 build
 *.kdev4
+
+kis-mediaspec/build/
+kis-mediaspec/dist/
+kis-mediaspec/gen-cocoa/
+kis-mediaspec/kis-mediaspec.xcodeproj/project.xcworkspace/
+kis-mediaspec/kis-mediaspec.xcodeproj/xcuserdata/
