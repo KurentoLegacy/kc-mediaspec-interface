@@ -93,6 +93,24 @@
 		C17DB571155BC0B9008A3837 /* sessionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessionSpec.m; sourceTree = "<group>"; };
 		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
 		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
+		C1FCFEFE159DBB96008492DF /* TApplicationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
+		C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
+		C1FCFF00159DBB96008492DF /* TException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
+		C1FCFF01159DBB96008492DF /* THTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THTTPClient.h; sourceTree = "<group>"; };
+		C1FCFF02159DBB96008492DF /* TMemoryBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMemoryBuffer.h; sourceTree = "<group>"; };
+		C1FCFF03159DBB96008492DF /* TNSFileHandleTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNSFileHandleTransport.h; sourceTree = "<group>"; };
+		C1FCFF04159DBB96008492DF /* TNSStreamTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNSStreamTransport.h; sourceTree = "<group>"; };
+		C1FCFF05159DBB96008492DF /* TProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProcessor.h; sourceTree = "<group>"; };
+		C1FCFF06159DBB96008492DF /* TProcessorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProcessorFactory.h; sourceTree = "<group>"; };
+		C1FCFF07159DBB96008492DF /* TProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocol.h; sourceTree = "<group>"; };
+		C1FCFF08159DBB96008492DF /* TProtocolException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolException.h; sourceTree = "<group>"; };
+		C1FCFF09159DBB96008492DF /* TProtocolFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolFactory.h; sourceTree = "<group>"; };
+		C1FCFF0A159DBB96008492DF /* TProtocolUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolUtil.h; sourceTree = "<group>"; };
+		C1FCFF0B159DBB96008492DF /* TSharedProcessorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSharedProcessorFactory.h; sourceTree = "<group>"; };
+		C1FCFF0C159DBB96008492DF /* TSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSocketClient.h; sourceTree = "<group>"; };
+		C1FCFF0D159DBB96008492DF /* TSocketServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSocketServer.h; sourceTree = "<group>"; };
+		C1FCFF0E159DBB96008492DF /* TTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTransport.h; sourceTree = "<group>"; };
+		C1FCFF0F159DBB96008492DF /* TTransportException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTransportException.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,7 @@
 		C103A137155A9AB5001472BD = {
 			isa = PBXGroup;
 			children = (
+				C1FCFEFD159DBB96008492DF /* Headers */,
 				C1425466155BEED700D069BE /* thrift-ios.framework */,
 				C17DB56B155BC0B9008A3837 /* gen-cocoa */,
 				C103A155155A9D3B001472BD /* mediaspec-thrift */,
@@ -159,6 +178,32 @@
 				C17DB573155BC0B9008A3837 /* transport.m */,
 			);
 			path = "gen-cocoa";
+			sourceTree = "<group>";
+		};
+		C1FCFEFD159DBB96008492DF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C1FCFEFE159DBB96008492DF /* TApplicationException.h */,
+				C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */,
+				C1FCFF00159DBB96008492DF /* TException.h */,
+				C1FCFF01159DBB96008492DF /* THTTPClient.h */,
+				C1FCFF02159DBB96008492DF /* TMemoryBuffer.h */,
+				C1FCFF03159DBB96008492DF /* TNSFileHandleTransport.h */,
+				C1FCFF04159DBB96008492DF /* TNSStreamTransport.h */,
+				C1FCFF05159DBB96008492DF /* TProcessor.h */,
+				C1FCFF06159DBB96008492DF /* TProcessorFactory.h */,
+				C1FCFF07159DBB96008492DF /* TProtocol.h */,
+				C1FCFF08159DBB96008492DF /* TProtocolException.h */,
+				C1FCFF09159DBB96008492DF /* TProtocolFactory.h */,
+				C1FCFF0A159DBB96008492DF /* TProtocolUtil.h */,
+				C1FCFF0B159DBB96008492DF /* TSharedProcessorFactory.h */,
+				C1FCFF0C159DBB96008492DF /* TSocketClient.h */,
+				C1FCFF0D159DBB96008492DF /* TSocketServer.h */,
+				C1FCFF0E159DBB96008492DF /* TTransport.h */,
+				C1FCFF0F159DBB96008492DF /* TTransportException.h */,
+			);
+			name = Headers;
+			path = "build/thrift-ios/dist/Thrift.framework/Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +495,7 @@
 				C1425472155BF58D00D069BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C142547A155D0A1300D069BE /* Build configuration list for PBXAggregateTarget "kis-mediaspec-framework" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +504,7 @@
 				C142547C155D0A1300D069BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
