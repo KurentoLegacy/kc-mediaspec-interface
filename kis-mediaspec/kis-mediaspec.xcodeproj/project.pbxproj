@@ -56,6 +56,7 @@
 		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
 		C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
 		C1A9222715A5CE9900B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
+		C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 			dstPath = "${PROJECT_DIR}/dist/${PRODUCT_NAME}.framework/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */,
 				C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */,
 				C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */,
 				C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */,
