@@ -36,6 +36,13 @@
 
 /* Begin PBXBuildFile section */
 		C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
+		C12741D115A477580083F3A9 /* SpecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
+		C12741D215A477580083F3A9 /* SpecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741D015A477580083F3A9 /* SpecTools.m */; };
+		C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */; };
+		C12741DC15A58CAB0083F3A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741DB15A58CAB0083F3A9 /* UIKit.framework */; };
+		C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
+		C12741E315A58CAB0083F3A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C12741E115A58CAB0083F3A9 /* InfoPlist.strings */; };
+		C12741E615A58CAB0083F3A9 /* IntersectTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */; };
 		C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
 		C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
 		C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB570155BC0B9008A3837 /* sessionSpec.h */; };
@@ -84,6 +91,16 @@
 		C103A157155A9D3B001472BD /* payload.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.thrift; sourceTree = "<group>"; };
 		C103A158155A9D3B001472BD /* sessionSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sessionSpec.thrift; sourceTree = "<group>"; };
 		C103A159155A9D3B001472BD /* transport.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = transport.thrift; sourceTree = "<group>"; };
+		C12741CF15A477580083F3A9 /* SpecTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecTools.h; sourceTree = "<group>"; };
+		C12741D015A477580083F3A9 /* SpecTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecTools.m; sourceTree = "<group>"; };
+		C12741D815A58CAA0083F3A9 /* kis-mediaspec-test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kis-mediaspec-test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C12741DB15A58CAB0083F3A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C12741E015A58CAB0083F3A9 /* kis-mediaspec-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kis-mediaspec-test-Info.plist"; sourceTree = "<group>"; };
+		C12741E215A58CAB0083F3A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */ = {isa = PBXFileReference; path = IntersectTestCase.h; sourceTree = "<group>"; };
+		C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntersectTestCase.m; sourceTree = "<group>"; };
+		C12741E715A58CAB0083F3A9 /* kis-mediaspec-test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kis-mediaspec-test-Prefix.pch"; sourceTree = "<group>"; };
 		C1425466155BEED700D069BE /* thrift-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "thrift-ios.framework"; path = "../../thrift-ios/build/Debug-iphoneuniversal/thrift-ios.framework"; sourceTree = "<group>"; };
 		C17DB56C155BC0B9008A3837 /* mediaSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediaSpec.h; sourceTree = "<group>"; };
 		C17DB56D155BC0B9008A3837 /* mediaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediaSpec.m; sourceTree = "<group>"; };
@@ -122,16 +139,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C12741D415A58CAA0083F3A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */,
+				C12741DC15A58CAB0083F3A9 /* UIKit.framework in Frameworks */,
+				C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C103A137155A9AB5001472BD = {
 			isa = PBXGroup;
 			children = (
+				C12741CD15A4770B0083F3A9 /* mediaspec-tools */,
 				C1FCFEFD159DBB96008492DF /* Headers */,
 				C1425466155BEED700D069BE /* thrift-ios.framework */,
 				C17DB56B155BC0B9008A3837 /* gen-cocoa */,
 				C103A155155A9D3B001472BD /* mediaspec-thrift */,
+				C12741DE15A58CAB0083F3A9 /* kis-mediaspec-test */,
 				C103A144155A9AB6001472BD /* Frameworks */,
 				C103A143155A9AB6001472BD /* Products */,
 			);
@@ -141,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C103A142155A9AB6001472BD /* libkis-mediaspec.a */,
+				C12741D815A58CAA0083F3A9 /* kis-mediaspec-test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				C103A145155A9AB6001472BD /* Foundation.framework */,
+				C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */,
+				C12741DB15A58CAB0083F3A9 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +195,35 @@
 			);
 			name = "mediaspec-thrift";
 			path = ../src/main/thrift;
+			sourceTree = "<group>";
+		};
+		C12741CD15A4770B0083F3A9 /* mediaspec-tools */ = {
+			isa = PBXGroup;
+			children = (
+				C12741CF15A477580083F3A9 /* SpecTools.h */,
+				C12741D015A477580083F3A9 /* SpecTools.m */,
+			);
+			name = "mediaspec-tools";
+			sourceTree = "<group>";
+		};
+		C12741DE15A58CAB0083F3A9 /* kis-mediaspec-test */ = {
+			isa = PBXGroup;
+			children = (
+				C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */,
+				C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */,
+				C12741DF15A58CAB0083F3A9 /* Supporting Files */,
+			);
+			path = "kis-mediaspec-test";
+			sourceTree = "<group>";
+		};
+		C12741DF15A58CAB0083F3A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C12741E015A58CAB0083F3A9 /* kis-mediaspec-test-Info.plist */,
+				C12741E115A58CAB0083F3A9 /* InfoPlist.strings */,
+				C12741E715A58CAB0083F3A9 /* kis-mediaspec-test-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C17DB56B155BC0B9008A3837 /* gen-cocoa */ = {
@@ -217,6 +278,7 @@
 				C17DB576155BC0B9008A3837 /* payload.h in Headers */,
 				C17DB578155BC0B9008A3837 /* sessionSpec.h in Headers */,
 				C17DB57A155BC0B9008A3837 /* transport.h in Headers */,
+				C12741D115A477580083F3A9 /* SpecTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +304,24 @@
 			productReference = C103A142155A9AB6001472BD /* libkis-mediaspec.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C12741D715A58CAA0083F3A9 /* kis-mediaspec-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C12741E815A58CAB0083F3A9 /* Build configuration list for PBXNativeTarget "kis-mediaspec-test" */;
+			buildPhases = (
+				C12741D315A58CAA0083F3A9 /* Sources */,
+				C12741D415A58CAA0083F3A9 /* Frameworks */,
+				C12741D515A58CAA0083F3A9 /* Resources */,
+				C12741D615A58CAA0083F3A9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kis-mediaspec-test";
+			productName = "kis-mediaspec-test";
+			productReference = C12741D815A58CAA0083F3A9 /* kis-mediaspec-test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +344,22 @@
 			targets = (
 				C142546F155BF58D00D069BE /* thrift-ios-dependency */,
 				C103A141155A9AB6001472BD /* kis-mediaspec */,
+				C12741D715A58CAA0083F3A9 /* kis-mediaspec-test */,
 				C1425479155D0A1300D069BE /* kis-mediaspec-framework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C12741D515A58CAA0083F3A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12741E315A58CAB0083F3A9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		C103A1A2155BAF66001472BD /* Generate Stub Files from Thrift */ = {
@@ -283,6 +375,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "PATH=$PATH:/usr/local/bin\nfor f in ${PROJECT_DIR}/../src/main/thrift/*\ndo\n    thrift -gen cocoa $f\ndone";
+		};
+		C12741D615A58CAA0083F3A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		C1425475155BF5A200D069BE /* Update source */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -351,6 +456,15 @@
 				C17DB577155BC0B9008A3837 /* payload.m in Sources */,
 				C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */,
 				C17DB57B155BC0B9008A3837 /* transport.m in Sources */,
+				C12741D215A477580083F3A9 /* SpecTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C12741D315A58CAA0083F3A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12741E615A58CAB0083F3A9 /* IntersectTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +477,17 @@
 			targetProxy = C1425473155BF59900D069BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C12741E115A58CAB0083F3A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C12741E215A58CAB0083F3A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C103A14D155A9AB6001472BD /* Debug */ = {
@@ -439,6 +564,36 @@
 			};
 			name = Release;
 		};
+		C12741E915A58CAB0083F3A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
+				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C12741EA15A58CAB0083F3A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
+				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		C1425471155BF58D00D069BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -487,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C12741E815A58CAB0083F3A9 /* Build configuration list for PBXNativeTarget "kis-mediaspec-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12741E915A58CAB0083F3A9 /* Debug */,
+				C12741EA15A58CAB0083F3A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C1425470155BF58D00D069BE /* Build configuration list for PBXAggregateTarget "thrift-ios-dependency" */ = {
 			isa = XCConfigurationList;
