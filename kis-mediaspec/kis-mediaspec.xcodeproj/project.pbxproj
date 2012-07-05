@@ -55,6 +55,8 @@
 		C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB571155BC0B9008A3837 /* sessionSpec.m */; };
 		C17DB57A155BC0B9008A3837 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
 		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
+		C1A9222115A5A5FA00B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
+		C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C142546F155BF58D00D069BE;
 			remoteInfo = "thrift-ios-dependency";
+		};
+		C1A9222415A5A84700B23FE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C103A139155A9AB5001472BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C103A141155A9AB6001472BD;
+			remoteInfo = "kis-mediaspec";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -98,7 +107,7 @@
 		C12741DB15A58CAB0083F3A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C12741E015A58CAB0083F3A9 /* kis-mediaspec-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kis-mediaspec-test-Info.plist"; sourceTree = "<group>"; };
 		C12741E215A58CAB0083F3A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */ = {isa = PBXFileReference; path = IntersectTestCase.h; sourceTree = "<group>"; };
+		C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntersectTestCase.h; sourceTree = "<group>"; };
 		C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntersectTestCase.m; sourceTree = "<group>"; };
 		C12741E715A58CAB0083F3A9 /* kis-mediaspec-test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kis-mediaspec-test-Prefix.pch"; sourceTree = "<group>"; };
 		C1425466155BEED700D069BE /* thrift-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "thrift-ios.framework"; path = "../../thrift-ios/build/Debug-iphoneuniversal/thrift-ios.framework"; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 		C17DB571155BC0B9008A3837 /* sessionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessionSpec.m; sourceTree = "<group>"; };
 		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
 		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
+		C1A9222215A5A71500B23FE7 /* Thrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Thrift.framework; path = "build/thrift-ios/dist/Thrift.framework"; sourceTree = "<group>"; };
 		C1FCFEFE159DBB96008492DF /* TApplicationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
 		C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
 		C1FCFF00159DBB96008492DF /* TException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
@@ -143,6 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */,
+				C1A9222115A5A5FA00B23FE7 /* libkis-mediaspec.a in Frameworks */,
 				C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */,
 				C12741DC15A58CAB0083F3A9 /* UIKit.framework in Frameworks */,
 				C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */,
@@ -155,6 +167,7 @@
 		C103A137155A9AB5001472BD = {
 			isa = PBXGroup;
 			children = (
+				C1A9222215A5A71500B23FE7 /* Thrift.framework */,
 				C12741CD15A4770B0083F3A9 /* mediaspec-tools */,
 				C1FCFEFD159DBB96008492DF /* Headers */,
 				C1425466155BEED700D069BE /* thrift-ios.framework */,
@@ -316,6 +329,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C1A9222515A5A84700B23FE7 /* PBXTargetDependency */,
 			);
 			name = "kis-mediaspec-test";
 			productName = "kis-mediaspec-test";
@@ -476,6 +490,11 @@
 			target = C142546F155BF58D00D069BE /* thrift-ios-dependency */;
 			targetProxy = C1425473155BF59900D069BE /* PBXContainerItemProxy */;
 		};
+		C1A9222515A5A84700B23FE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C103A141155A9AB6001472BD /* kis-mediaspec */;
+			targetProxy = C1A9222415A5A84700B23FE7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -570,9 +589,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/build/thrift-ios/dist\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
 				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -585,9 +606,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/build/thrift-ios/dist\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
 				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -650,6 +673,7 @@
 				C12741EA15A58CAB0083F3A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1425470155BF58D00D069BE /* Build configuration list for PBXAggregateTarget "thrift-ios-dependency" */ = {
 			isa = XCConfigurationList;

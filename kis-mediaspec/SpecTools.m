@@ -3,6 +3,34 @@
 
 @implementation SpecTools
 
+#pragma mark Light creators
+#pragma mark -
+
++ (KisSessionSpec*)createSessionSpecWithMedias:(NSArray*)medias id:(NSString*)id {
+	KisSessionSpec *sessionSpec = [[KisSessionSpec alloc] init];
+	
+	[sessionSpec setMedias:medias];
+	[sessionSpec setId:id];
+	
+	return sessionSpec;
+}
+
++ (KisPayloadRtp*)createPayloadRtpWithId:(int32_t)id codecName:(NSString*)codecName
+							clockRate:(int32_t)clockRate {
+	KisPayloadRtp *payload = [[KisPayloadRtp alloc] init];
+	
+	[payload setId:id];
+	[payload setCodecName:codecName];
+	[payload setClockRate:clockRate];
+	
+	return payload;
+}
+
+
+
+#pragma mark Intersections
+#pragma mark -
+
 + (NSArray*)intersectSessionSpecsAnswerer:(KisSessionSpec*)answerer
 					andOfferer:(KisSessionSpec*)offerer {
 	NSArray *answererrMedias = answerer.medias;
@@ -273,7 +301,5 @@ select_minor(int32_t a, int32_t b) {
 + (KisTransportRtmp*)createTransportRtmpCopy:(KisTransportRtmp*)rtmp {
 	return [[KisTransportRtmp alloc] initWithUrl:rtmp.url publish:rtmp.publish play:rtmp.play];
 }
-
-#pragma mark -
 
 @end
