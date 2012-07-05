@@ -46,7 +46,7 @@
 		NSArray *medias = nil;
 		
 		for (KisMediaSpec *ansMedia in answererrMedias) {
-			if ([ansMedia.type isSubsetOfSet:offMedia.type]
+			if (![ansMedia.type isSubsetOfSet:offMedia.type]
 					|| [usedMedias containsObject:ansMedia])
 				continue;
 			
@@ -88,7 +88,7 @@
 					andOfferer:(KisMediaSpec*)offerer {
 	if (![SpecTools checkTransportCompatibleAnswerer:answerer andOfferer:offerer])
 		return nil;
-	if ([answerer.type isSubsetOfSet:offerer.type])
+	if (![answerer.type isSubsetOfSet:offerer.type])
 		return nil;
 	
 	NSArray *transports = [SpecTools intersectTransportsAnswerer:answerer.transport
@@ -279,11 +279,13 @@ select_minor(int32_t a, int32_t b) {
 + (KisPayloadRtp*)createPayloadRtpCopy:(KisPayloadRtp*)rtp {
 	if (rtp == nil)
 		return nil;
+	KisFraction *framerate = nil;
+	if (rtp.framerate != nil)
+		framerate = [[KisFraction alloc] initWithNum:rtp.framerate.num denom:rtp.framerate.denom];
 	
 	return [[KisPayloadRtp alloc] initWithId:rtp.id codecName:rtp.codecName clockRate:rtp.clockRate
 		channels:rtp.channels width:rtp.width height:rtp.height bitrate:rtp.bitrate
-		framerate:[[KisFraction alloc] initWithNum:rtp.framerate.num denom:rtp.framerate.denom]
-		extraParams:[NSDictionary dictionaryWithDictionary:rtp.extraParams]];
+		framerate:framerate extraParams:[NSDictionary dictionaryWithDictionary:rtp.extraParams]];
 }
 
 
