@@ -39,7 +39,6 @@
 		C12741D115A477580083F3A9 /* SpecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
 		C12741D215A477580083F3A9 /* SpecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741D015A477580083F3A9 /* SpecTools.m */; };
 		C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */; };
-		C12741DC15A58CAB0083F3A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741DB15A58CAB0083F3A9 /* UIKit.framework */; };
 		C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
 		C12741E315A58CAB0083F3A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C12741E115A58CAB0083F3A9 /* InfoPlist.strings */; };
 		C12741E615A58CAB0083F3A9 /* IntersectTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */; };
@@ -55,8 +54,8 @@
 		C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB571155BC0B9008A3837 /* sessionSpec.m */; };
 		C17DB57A155BC0B9008A3837 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
 		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
-		C1A9222115A5A5FA00B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
 		C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
+		C1A9222715A5CE9900B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +119,7 @@
 		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
 		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
 		C1A9222215A5A71500B23FE7 /* Thrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Thrift.framework; path = "build/thrift-ios/dist/Thrift.framework"; sourceTree = "<group>"; };
+		C1A9222815A5CF5600B23FE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1FCFEFE159DBB96008492DF /* TApplicationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
 		C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
 		C1FCFF00159DBB96008492DF /* TException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
@@ -153,10 +153,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A9222715A5CE9900B23FE7 /* libkis-mediaspec.a in Frameworks */,
 				C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */,
-				C1A9222115A5A5FA00B23FE7 /* libkis-mediaspec.a in Frameworks */,
 				C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */,
-				C12741DC15A58CAB0083F3A9 /* UIKit.framework in Frameworks */,
 				C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +166,7 @@
 		C103A137155A9AB5001472BD = {
 			isa = PBXGroup;
 			children = (
+				C1A9222815A5CF5600B23FE7 /* UIKit.framework */,
 				C1A9222215A5A71500B23FE7 /* Thrift.framework */,
 				C12741CD15A4770B0083F3A9 /* mediaspec-tools */,
 				C1FCFEFD159DBB96008492DF /* Headers */,
