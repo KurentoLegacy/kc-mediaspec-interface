@@ -148,7 +148,7 @@
 			KisTransportRtp *tRtp = [[KisTransportRtp alloc] initWithAddress:@"127.0.0.2" port:3332];
 			KisTransport *transport = [[KisTransport alloc] initWithRtp:tRtp rtmp:nil];
 			
-			KisPayloadRtp *payRtp = [SpecTools createPayloadRtpWithId:8 codecName:@"AMR" clockRate:90000];
+			KisPayloadRtp *payRtp = [SpecTools createPayloadRtpWithId:98 codecName:@"AMR" clockRate:8000];
 			[payRtp setChannels:1];
 			[payRtp setBitrate:13];
 			[payRtp setExtraParams:[NSDictionary dictionaryWithObject:@"1" forKey:@"octet-align"]];

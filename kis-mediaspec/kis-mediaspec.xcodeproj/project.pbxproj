@@ -54,9 +54,12 @@
 		C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB571155BC0B9008A3837 /* sessionSpec.m */; };
 		C17DB57A155BC0B9008A3837 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
 		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
+		C18DF26D15A6ED6600094128 /* SdpConversor.h in Headers */ = {isa = PBXBuildFile; fileRef = C18DF26B15A6ED6600094128 /* SdpConversor.h */; };
+		C18DF26E15A6ED6600094128 /* SdpConversor.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DF26C15A6ED6600094128 /* SdpConversor.m */; };
 		C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
 		C1A9222715A5CE9900B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
 		C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
+		C1B9BB5A15A7056C00920BFD /* ConversorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +123,12 @@
 		C17DB571155BC0B9008A3837 /* sessionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessionSpec.m; sourceTree = "<group>"; };
 		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
 		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
+		C18DF26B15A6ED6600094128 /* SdpConversor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdpConversor.h; sourceTree = "<group>"; };
+		C18DF26C15A6ED6600094128 /* SdpConversor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SdpConversor.m; sourceTree = "<group>"; };
 		C1A9222215A5A71500B23FE7 /* Thrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Thrift.framework; path = "build/thrift-ios/dist/Thrift.framework"; sourceTree = "<group>"; };
 		C1A9222815A5CF5600B23FE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1B9BB5815A7056C00920BFD /* ConversorTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversorTestCase.h; sourceTree = "<group>"; };
+		C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversorTestCase.m; sourceTree = "<group>"; };
 		C1FCFEFE159DBB96008492DF /* TApplicationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
 		C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
 		C1FCFF00159DBB96008492DF /* TException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
@@ -217,6 +224,8 @@
 			children = (
 				C12741CF15A477580083F3A9 /* SpecTools.h */,
 				C12741D015A477580083F3A9 /* SpecTools.m */,
+				C18DF26B15A6ED6600094128 /* SdpConversor.h */,
+				C18DF26C15A6ED6600094128 /* SdpConversor.m */,
 			);
 			name = "mediaspec-tools";
 			sourceTree = "<group>";
@@ -224,9 +233,11 @@
 		C12741DE15A58CAB0083F3A9 /* kis-mediaspec-test */ = {
 			isa = PBXGroup;
 			children = (
+				C12741DF15A58CAB0083F3A9 /* Supporting Files */,
 				C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */,
 				C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */,
-				C12741DF15A58CAB0083F3A9 /* Supporting Files */,
+				C1B9BB5815A7056C00920BFD /* ConversorTestCase.h */,
+				C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */,
 			);
 			path = "kis-mediaspec-test";
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 				C17DB578155BC0B9008A3837 /* sessionSpec.h in Headers */,
 				C17DB57A155BC0B9008A3837 /* transport.h in Headers */,
 				C12741D115A477580083F3A9 /* SpecTools.h in Headers */,
+				C18DF26D15A6ED6600094128 /* SdpConversor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +429,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\ngit clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"";
+			shellScript = "#rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\n#git clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"";
 		};
 		C1425477155BF74300D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -431,7 +443,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}/build/thrift-ios\nxcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework";
+			shellScript = "#cd ${PROJECT_DIR}/build/thrift-ios\n#xcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework";
 		};
 		C142547D155D0A9F00D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -473,6 +485,7 @@
 				C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */,
 				C17DB57B155BC0B9008A3837 /* transport.m in Sources */,
 				C12741D215A477580083F3A9 /* SpecTools.m in Sources */,
+				C18DF26E15A6ED6600094128 /* SdpConversor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C12741E615A58CAB0083F3A9 /* IntersectTestCase.m in Sources */,
+				C1B9BB5A15A7056C00920BFD /* ConversorTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
