@@ -46,6 +46,7 @@
 		C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
 		C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB570155BC0B9008A3837 /* sessionSpec.h */; };
 		C1425486155D0B3B00D069BE /* transport.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
+		C17BFD9515A70FE000B1259B /* SdpConversor.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C18DF26B15A6ED6600094128 /* SdpConversor.h */; };
 		C17DB574155BC0B9008A3837 /* mediaSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
 		C17DB575155BC0B9008A3837 /* mediaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB56D155BC0B9008A3837 /* mediaSpec.m */; };
 		C17DB576155BC0B9008A3837 /* payload.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
@@ -86,6 +87,7 @@
 			dstPath = "${PROJECT_DIR}/dist/${PRODUCT_NAME}.framework/Headers/";
 			dstSubfolderSpec = 0;
 			files = (
+				C17BFD9515A70FE000B1259B /* SdpConversor.h in Copy Headers Files */,
 				C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */,
 				C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */,
 				C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */,
