@@ -431,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\ngit clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"";
+			shellScript = "if [ ! -f \"${PROJECT_DIR}/build/thrift-ios/built.mark\" ]; then\n  rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\n  git clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"\nfi";
 		};
 		C1425477155BF74300D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -445,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}/build/thrift-ios\nxcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework";
+			shellScript = "if [ ! -f \"${PROJECT_DIR}/build/thrift-ios/built.mark\" ]; then\n  cd ${PROJECT_DIR}/build/thrift-ios\n  xcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework\n  touch \"${PROJECT_DIR}/build/thrift-ios/built.mark\"\nfi";
 		};
 		C142547D155D0A9F00D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
