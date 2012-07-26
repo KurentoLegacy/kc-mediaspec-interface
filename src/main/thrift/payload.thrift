@@ -19,11 +19,28 @@ namespace c_glib Kms
 namespace cocoa Kis
 namespace * com.kurento.mediaspec
 
+/**
+ * Provides accurate presentation of rational numbers as num/denom.
+ */
 struct Fraction {
 	1: required i32 num,
 	2: required i32 denom,
 }
 
+/**
+ *
+ * PayloadRtp represents a RTP payload descriptor. it contains the specification
+ * of an RTP payload, including:
+ * <ul>
+ * <li>Payload number (id).
+ * <li>Media codec name.
+ * <li>Media sample rate.
+ * <li>Stream bit rate.
+ * <li>Codec frame rate. This is applicable only to VIDEO type.
+ * <li>Video format: width x height.
+ * </ul>
+ *
+ */
 struct PayloadRtp {
 	1: required i32 id,
 	2: required string codecName,
@@ -38,6 +55,17 @@ struct PayloadRtp {
 	50: optional map<string, string> extraParams,
 }
 
+/**
+ *
+ * This class provides a container to specific payload types. In a standard java
+ * coding schema this class would have been declared abstract, and specific
+ * payload classes would ha inherit from it, but composition is used instead in
+ * order to facilitate serialization.
+ *
+ * @see MediaSpec
+ * @see PayloadRtp
+ *
+ */
 struct Payload {
 	1: optional PayloadRtp rtp,
 }

@@ -27,16 +27,45 @@ enum MediaType {
 	VIDEO
 }
 
+/**
+ * The media channel Direction.
+ */
 enum Direction {
+	/**
+	 * Only sends media
+	 */
 	SENDONLY,
+	/**
+	 * Only receives media
+	 */
 	RECVONLY,
+	/**
+	 * Sends and receives media
+	 */
 	SENDRECV,
+	/**
+	 * Inactive channel no media is sent nor received
+	 */
 	INACTIVE,
 }
 
+/**
+ * <p>
+ * MediaSpec represents a channel media descriptor. it contains one payload
+ * descriptor for each supported format and one unique transport descriptor to
+ * specify the media delivery layer.
+ * </p>
+ *
+ * @see SessionSpec
+ * @see Payload
+ * @see Transport
+ */
 struct MediaSpec {
 	1: required list<payload.Payload> payloads,
 	2: required set<MediaType> type,
 	3: required transport.Transport transport,
+	/**
+	 * The channel Direction.
+	 */
 	4: required Direction direction,
 }

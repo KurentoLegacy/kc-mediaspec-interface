@@ -19,17 +19,48 @@ namespace c_glib Kms
 namespace cocoa Kis
 namespace * com.kurento.mediaspec
 
+/**
+ * This class provides a description mechanism for RTP transport. It basically
+ * contains the transport address, consisting of IP address and UDP port.
+ * Transport instance represent the reception address for local descriptors and
+ * transmission address for remote descriptors.<br>
+ * Remember each peer in a communication must handle to descriptor: local,
+ * specifying reception information and remote, with transmission configuration.
+ * The same descriptor swaps its role on each side of the communication.
+ *
+ */
 struct TransportRtp {
 	1: string address,
 	2: i32 port,
 }
 
+/**
+ *
+ * This class provides a description mechanism for RTMP transport channels. From
+ * Kurento point of view RTMP is just transport mechanism analogous to RTP,
+ * where the transport address takes the form of an RTMP URL. Play attribute
+ * indicates local descriptors the reception URL and Publish attribute provides
+ * the transmission URL in remote descriptors. Notice that local and remote
+ * descriptor role depends on the peer.
+ *
+ */
 struct TransportRtmp {
 	1: optional string url,
 	2: optional string publish,
 	3: optional string play,
 }
 
+/**
+ *
+ * This class provides a container to specific transport types. In a standard
+ * java coding schema this class would have been declared abstract and specific
+ * transport classes would ha inherit from it, but composition is used instead
+ * in order to facilitate serialization.
+ *
+ * @see MediaSpec
+ * @see TransportRtmp
+ * @see TransportRtp
+ */
 struct Transport {
 	1: optional TransportRtp rtp,
 	2: optional TransportRtmp rtmp,

@@ -21,6 +21,33 @@ namespace * com.kurento.mediaspec
 
 include "mediaSpec.thrift"
 
+/**
+ * SessionSpec is designed to extend <a
+ * href="http://www.ietf.org/rfc/rfc2327.txt">SDP</a> with new transports and
+ * media types, providing a generic mechanism for Session Description
+ * specification. Figure below shows data model components and their
+ * interaction.
+ * <p>
+ *
+ * <img src="doc-files/classdiagram.svg"/>
+ *
+ * <p>
+ *
+ * SessionSpec is intended to be directly used in multimedia negotiation. For
+ * that purpose an intersection feature is implemented to calculate common
+ * capabilities on both sides of a communication.
+ *
+ * <p>
+ *
+ * SessionSpec data model design has avoided inheritance in order to facilitate
+ * object serialization and transfer in a multi-platform environment. Many
+ * protocols can be used for delivery, including: THRIFT, JSON or even SDP (only
+ * with RTP channels). Kurento provides a set of <a href="??">Conversion
+ * utilities</a> for this purpose
+ *
+ * @see MediaSpec
+ *
+ */
 struct SessionSpec {
 	1: required list<mediaSpec.MediaSpec> medias,
 	2: required string id;
