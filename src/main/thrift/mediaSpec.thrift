@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace c_glib Kms
 namespace cocoa Kis
-namespace * com.kurento.commons.mediaspec
+namespace * com.kurento.mediaspec
 
 include "payload.thrift"
 include "transport.thrift"
