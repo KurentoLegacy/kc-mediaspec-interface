@@ -36,6 +36,7 @@
 
 /* Begin PBXBuildFile section */
 		C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
+		C108EFA915E4D393003EB273 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
 		C12741D115A477580083F3A9 /* SpecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
 		C12741D215A477580083F3A9 /* SpecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741D015A477580083F3A9 /* SpecTools.m */; };
 		C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */; };
@@ -110,13 +111,11 @@
 		C12741D015A477580083F3A9 /* SpecTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecTools.m; sourceTree = "<group>"; };
 		C12741D815A58CAA0083F3A9 /* kis-mediaspec-test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kis-mediaspec-test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C12741DB15A58CAB0083F3A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C12741E015A58CAB0083F3A9 /* kis-mediaspec-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kis-mediaspec-test-Info.plist"; sourceTree = "<group>"; };
 		C12741E215A58CAB0083F3A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C12741E415A58CAB0083F3A9 /* IntersectTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntersectTestCase.h; sourceTree = "<group>"; };
 		C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntersectTestCase.m; sourceTree = "<group>"; };
 		C12741E715A58CAB0083F3A9 /* kis-mediaspec-test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kis-mediaspec-test-Prefix.pch"; sourceTree = "<group>"; };
-		C1425466155BEED700D069BE /* thrift-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "thrift-ios.framework"; path = "../../thrift-ios/build/Debug-iphoneuniversal/thrift-ios.framework"; sourceTree = "<group>"; };
 		C17DB56C155BC0B9008A3837 /* mediaSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediaSpec.h; sourceTree = "<group>"; };
 		C17DB56D155BC0B9008A3837 /* mediaSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediaSpec.m; sourceTree = "<group>"; };
 		C17DB56E155BC0B9008A3837 /* payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payload.h; sourceTree = "<group>"; };
@@ -131,24 +130,6 @@
 		C1A9222815A5CF5600B23FE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1B9BB5815A7056C00920BFD /* ConversorTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversorTestCase.h; sourceTree = "<group>"; };
 		C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversorTestCase.m; sourceTree = "<group>"; };
-		C1FCFEFE159DBB96008492DF /* TApplicationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
-		C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
-		C1FCFF00159DBB96008492DF /* TException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
-		C1FCFF01159DBB96008492DF /* THTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THTTPClient.h; sourceTree = "<group>"; };
-		C1FCFF02159DBB96008492DF /* TMemoryBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMemoryBuffer.h; sourceTree = "<group>"; };
-		C1FCFF03159DBB96008492DF /* TNSFileHandleTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNSFileHandleTransport.h; sourceTree = "<group>"; };
-		C1FCFF04159DBB96008492DF /* TNSStreamTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNSStreamTransport.h; sourceTree = "<group>"; };
-		C1FCFF05159DBB96008492DF /* TProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProcessor.h; sourceTree = "<group>"; };
-		C1FCFF06159DBB96008492DF /* TProcessorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProcessorFactory.h; sourceTree = "<group>"; };
-		C1FCFF07159DBB96008492DF /* TProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocol.h; sourceTree = "<group>"; };
-		C1FCFF08159DBB96008492DF /* TProtocolException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolException.h; sourceTree = "<group>"; };
-		C1FCFF09159DBB96008492DF /* TProtocolFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolFactory.h; sourceTree = "<group>"; };
-		C1FCFF0A159DBB96008492DF /* TProtocolUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TProtocolUtil.h; sourceTree = "<group>"; };
-		C1FCFF0B159DBB96008492DF /* TSharedProcessorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSharedProcessorFactory.h; sourceTree = "<group>"; };
-		C1FCFF0C159DBB96008492DF /* TSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSocketClient.h; sourceTree = "<group>"; };
-		C1FCFF0D159DBB96008492DF /* TSocketServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSocketServer.h; sourceTree = "<group>"; };
-		C1FCFF0E159DBB96008492DF /* TTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTransport.h; sourceTree = "<group>"; };
-		C1FCFF0F159DBB96008492DF /* TTransportException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTransportException.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C108EFA915E4D393003EB273 /* Thrift.framework in Frameworks */,
 				C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,8 +162,6 @@
 				C1A9222815A5CF5600B23FE7 /* UIKit.framework */,
 				C1A9222215A5A71500B23FE7 /* Thrift.framework */,
 				C12741CD15A4770B0083F3A9 /* mediaspec-tools */,
-				C1FCFEFD159DBB96008492DF /* Headers */,
-				C1425466155BEED700D069BE /* thrift-ios.framework */,
 				C17DB56B155BC0B9008A3837 /* gen-cocoa */,
 				C103A155155A9D3B001472BD /* mediaspec-thrift */,
 				C12741DE15A58CAB0083F3A9 /* kis-mediaspec-test */,
@@ -204,7 +184,6 @@
 			children = (
 				C103A145155A9AB6001472BD /* Foundation.framework */,
 				C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */,
-				C12741DB15A58CAB0083F3A9 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,32 +246,6 @@
 				C17DB573155BC0B9008A3837 /* transport.m */,
 			);
 			path = "gen-cocoa";
-			sourceTree = "<group>";
-		};
-		C1FCFEFD159DBB96008492DF /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				C1FCFEFE159DBB96008492DF /* TApplicationException.h */,
-				C1FCFEFF159DBB96008492DF /* TBinaryProtocol.h */,
-				C1FCFF00159DBB96008492DF /* TException.h */,
-				C1FCFF01159DBB96008492DF /* THTTPClient.h */,
-				C1FCFF02159DBB96008492DF /* TMemoryBuffer.h */,
-				C1FCFF03159DBB96008492DF /* TNSFileHandleTransport.h */,
-				C1FCFF04159DBB96008492DF /* TNSStreamTransport.h */,
-				C1FCFF05159DBB96008492DF /* TProcessor.h */,
-				C1FCFF06159DBB96008492DF /* TProcessorFactory.h */,
-				C1FCFF07159DBB96008492DF /* TProtocol.h */,
-				C1FCFF08159DBB96008492DF /* TProtocolException.h */,
-				C1FCFF09159DBB96008492DF /* TProtocolFactory.h */,
-				C1FCFF0A159DBB96008492DF /* TProtocolUtil.h */,
-				C1FCFF0B159DBB96008492DF /* TSharedProcessorFactory.h */,
-				C1FCFF0C159DBB96008492DF /* TSocketClient.h */,
-				C1FCFF0D159DBB96008492DF /* TSocketServer.h */,
-				C1FCFF0E159DBB96008492DF /* TTransport.h */,
-				C1FCFF0F159DBB96008492DF /* TTransportException.h */,
-			);
-			name = Headers;
-			path = "build/thrift-ios/dist/Thrift.framework/Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -f \"${PROJECT_DIR}/build/thrift-ios/built.mark\" ]; then\n  rm -fr \"${PROJECT_DIR}/build/thrift-ios\"\n  git clone ssh://git@repository.kurento.com/kis/thrift-ios.git \"${PROJECT_DIR}/build/thrift-ios\"\nfi";
+			shellScript = "VERSION=\"thrift-0.8.0\"\nDIR=\"${PROJECT_DIR}/build/thrift-ios\"\nif [ ! -d ${DIR} ]; then\n  git clone ssh://git@repository.kurento.com/kis/thrift-ios.git ${DIR}\nfi\ncd $DIR\nif ! git show-ref --tags --quiet --verify \"refs/tags/${VERSION}\"; then\n  cd ${DIR}\n  git checkout master\n  git pull\n  git pull --tags\nfi\n\ngit checkout ${VERSION}";
 		};
 		C1425477155BF74300D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -445,7 +398,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -f \"${PROJECT_DIR}/build/thrift-ios/built.mark\" ]; then\n  cd ${PROJECT_DIR}/build/thrift-ios\n  xcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework\n  touch \"${PROJECT_DIR}/build/thrift-ios/built.mark\"\nfi";
+			shellScript = "DIR=\"${PROJECT_DIR}/build/thrift-ios\"\nif [ ! -d ${DIR}/dist ]; then\n  cd ${DIR}\n  xcodebuild -project thrift-ios.xcodeproj -target thrift-ios-framework\nfi";
 		};
 		C142547D155D0A9F00D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -574,10 +527,17 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/thrift-ios/dist\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/**",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/protocol",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/transport",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
 				SKIP_INSTALL = YES;
@@ -590,10 +550,17 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/kis_mediaspec.dst;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/thrift-ios/dist\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/**",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/protocol",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/transport",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "kis-mediaspec";
 				SKIP_INSTALL = YES;
