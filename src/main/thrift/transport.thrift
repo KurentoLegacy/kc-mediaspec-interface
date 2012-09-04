@@ -77,9 +77,7 @@ struct TransportIceCandidate {
 }
 
 struct TransportIce {
-	1: string pwd,
-	2: string user,
-	3: list<TransportIceCandidate> candidates,
+	1: list<TransportIceCandidate> candidates,
 }
 
 /**
