@@ -50,6 +50,38 @@ struct TransportRtmp {
 	3: optional string play,
 }
 
+enum TransportIceCandidateType {
+	HOST,
+	SERVER_REFLEXIVE,
+	PEER_REFLEXIVE,
+	RELAYED
+}
+
+enum TransportIceCandidateTransport {
+	UDP,
+}
+
+struct TransportIceCandidate {
+	1: required TransportIceCandidateType type,
+	2: required TransportIceCandidateTransport transport,
+	3: required string address,
+	4: required i32 port,
+	5: optional string baseAddress,
+	6: optional i32 basePort,
+	7: required i32 priority,
+	8: optional i32 stream_id,
+	9: required i32 component_id,
+	10: required string foundation,
+	11: required string username,
+	12: required string password,
+}
+
+struct TransportIce {
+	1: string pwd,
+	2: string user,
+	3: list<TransportIceCandidate> candidates,
+}
+
 /**
  *
  * This class provides a container to specific transport types. In a standard
@@ -64,4 +96,5 @@ struct TransportRtmp {
 struct Transport {
 	1: optional TransportRtp rtp,
 	2: optional TransportRtmp rtmp,
+	3: optional TransportIce ice,
 }
