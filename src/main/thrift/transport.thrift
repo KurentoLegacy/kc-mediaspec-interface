@@ -77,7 +77,7 @@ struct TransportIceCandidate {
 }
 
 struct TransportIce {
-	1: list<TransportIceCandidate> candidates,
+	1: required list<TransportIceCandidate> candidates,
 }
 
 /**
