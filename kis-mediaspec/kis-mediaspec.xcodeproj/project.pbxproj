@@ -25,7 +25,6 @@
 			buildPhases = (
 				C142547D155D0A9F00D069BE /* Build Static Lib */,
 				C142547E155D0ABA00D069BE /* Build Universal Framework */,
-				C142547F155D0B2600D069BE /* Copy Headers Files */,
 			);
 			dependencies = (
 			);
@@ -37,17 +36,10 @@
 /* Begin PBXBuildFile section */
 		C103A146155A9AB6001472BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
 		C108EFA915E4D393003EB273 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
-		C12741D115A477580083F3A9 /* SpecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
-		C12741D215A477580083F3A9 /* SpecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741D015A477580083F3A9 /* SpecTools.m */; };
 		C12741DA15A58CAB0083F3A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */; };
 		C12741DD15A58CAB0083F3A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A145155A9AB6001472BD /* Foundation.framework */; };
 		C12741E315A58CAB0083F3A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C12741E115A58CAB0083F3A9 /* InfoPlist.strings */; };
 		C12741E615A58CAB0083F3A9 /* IntersectTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C12741E515A58CAB0083F3A9 /* IntersectTestCase.m */; };
-		C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
-		C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
-		C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB570155BC0B9008A3837 /* sessionSpec.h */; };
-		C1425486155D0B3B00D069BE /* transport.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
-		C17BFD9515A70FE000B1259B /* SdpConversor.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C18DF26B15A6ED6600094128 /* SdpConversor.h */; };
 		C17DB574155BC0B9008A3837 /* mediaSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56C155BC0B9008A3837 /* mediaSpec.h */; };
 		C17DB575155BC0B9008A3837 /* mediaSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB56D155BC0B9008A3837 /* mediaSpec.m */; };
 		C17DB576155BC0B9008A3837 /* payload.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB56E155BC0B9008A3837 /* payload.h */; };
@@ -56,12 +48,13 @@
 		C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB571155BC0B9008A3837 /* sessionSpec.m */; };
 		C17DB57A155BC0B9008A3837 /* transport.h in Headers */ = {isa = PBXBuildFile; fileRef = C17DB572155BC0B9008A3837 /* transport.h */; };
 		C17DB57B155BC0B9008A3837 /* transport.m in Sources */ = {isa = PBXBuildFile; fileRef = C17DB573155BC0B9008A3837 /* transport.m */; };
-		C18DF26D15A6ED6600094128 /* SdpConversor.h in Headers */ = {isa = PBXBuildFile; fileRef = C18DF26B15A6ED6600094128 /* SdpConversor.h */; };
-		C18DF26E15A6ED6600094128 /* SdpConversor.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DF26C15A6ED6600094128 /* SdpConversor.m */; };
 		C1A9222315A5A71500B23FE7 /* Thrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A9222215A5A71500B23FE7 /* Thrift.framework */; };
 		C1A9222715A5CE9900B23FE7 /* libkis-mediaspec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C103A142155A9AB6001472BD /* libkis-mediaspec.a */; };
-		C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */ = {isa = PBXBuildFile; fileRef = C12741CF15A477580083F3A9 /* SpecTools.h */; };
 		C1B9BB5A15A7056C00920BFD /* ConversorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */; };
+		C1BFFC1F161AE550000F535D /* SdpConversor.h in Headers */ = {isa = PBXBuildFile; fileRef = C1BFFC1B161AE550000F535D /* SdpConversor.h */; };
+		C1BFFC20161AE550000F535D /* SdpConversor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFFC1C161AE550000F535D /* SdpConversor.m */; };
+		C1BFFC21161AE550000F535D /* SpecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C1BFFC1D161AE550000F535D /* SpecTools.h */; };
+		C1BFFC22161AE550000F535D /* SpecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFFC1E161AE550000F535D /* SpecTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,25 +74,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C142547F155D0B2600D069BE /* Copy Headers Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "${PROJECT_DIR}/dist/${PRODUCT_NAME}.framework/Headers/";
-			dstSubfolderSpec = 0;
-			files = (
-				C17BFD9515A70FE000B1259B /* SdpConversor.h in Copy Headers Files */,
-				C1A9222E15A5FE9F00B23FE7 /* SpecTools.h in Copy Headers Files */,
-				C1425480155D0B3B00D069BE /* mediaSpec.h in Copy Headers Files */,
-				C1425482155D0B3B00D069BE /* payload.h in Copy Headers Files */,
-				C1425484155D0B3B00D069BE /* sessionSpec.h in Copy Headers Files */,
-				C1425486155D0B3B00D069BE /* transport.h in Copy Headers Files */,
-			);
-			name = "Copy Headers Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		C103A142155A9AB6001472BD /* libkis-mediaspec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkis-mediaspec.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C103A145155A9AB6001472BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,8 +81,6 @@
 		C103A157155A9D3B001472BD /* payload.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = payload.thrift; sourceTree = "<group>"; };
 		C103A158155A9D3B001472BD /* sessionSpec.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sessionSpec.thrift; sourceTree = "<group>"; };
 		C103A159155A9D3B001472BD /* transport.thrift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = transport.thrift; sourceTree = "<group>"; };
-		C12741CF15A477580083F3A9 /* SpecTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecTools.h; sourceTree = "<group>"; };
-		C12741D015A477580083F3A9 /* SpecTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecTools.m; sourceTree = "<group>"; };
 		C12741D815A58CAA0083F3A9 /* kis-mediaspec-test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kis-mediaspec-test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12741D915A58CAB0083F3A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C12741E015A58CAB0083F3A9 /* kis-mediaspec-test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kis-mediaspec-test-Info.plist"; sourceTree = "<group>"; };
@@ -124,12 +96,14 @@
 		C17DB571155BC0B9008A3837 /* sessionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessionSpec.m; sourceTree = "<group>"; };
 		C17DB572155BC0B9008A3837 /* transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transport.h; sourceTree = "<group>"; };
 		C17DB573155BC0B9008A3837 /* transport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transport.m; sourceTree = "<group>"; };
-		C18DF26B15A6ED6600094128 /* SdpConversor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdpConversor.h; sourceTree = "<group>"; };
-		C18DF26C15A6ED6600094128 /* SdpConversor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SdpConversor.m; sourceTree = "<group>"; };
 		C1A9222215A5A71500B23FE7 /* Thrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Thrift.framework; path = "build/thrift-ios/dist/Thrift.framework"; sourceTree = "<group>"; };
 		C1A9222815A5CF5600B23FE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1B9BB5815A7056C00920BFD /* ConversorTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversorTestCase.h; sourceTree = "<group>"; };
 		C1B9BB5915A7056C00920BFD /* ConversorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversorTestCase.m; sourceTree = "<group>"; };
+		C1BFFC1B161AE550000F535D /* SdpConversor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SdpConversor.h; path = "mediaspec-tools/SdpConversor.h"; sourceTree = "<group>"; };
+		C1BFFC1C161AE550000F535D /* SdpConversor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SdpConversor.m; path = "mediaspec-tools/SdpConversor.m"; sourceTree = "<group>"; };
+		C1BFFC1D161AE550000F535D /* SpecTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecTools.h; path = "mediaspec-tools/SpecTools.h"; sourceTree = "<group>"; };
+		C1BFFC1E161AE550000F535D /* SpecTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecTools.m; path = "mediaspec-tools/SpecTools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +177,10 @@
 		C12741CD15A4770B0083F3A9 /* mediaspec-tools */ = {
 			isa = PBXGroup;
 			children = (
-				C12741CF15A477580083F3A9 /* SpecTools.h */,
-				C12741D015A477580083F3A9 /* SpecTools.m */,
-				C18DF26B15A6ED6600094128 /* SdpConversor.h */,
-				C18DF26C15A6ED6600094128 /* SdpConversor.m */,
+				C1BFFC1B161AE550000F535D /* SdpConversor.h */,
+				C1BFFC1C161AE550000F535D /* SdpConversor.m */,
+				C1BFFC1D161AE550000F535D /* SpecTools.h */,
+				C1BFFC1E161AE550000F535D /* SpecTools.m */,
 			);
 			name = "mediaspec-tools";
 			sourceTree = "<group>";
@@ -259,8 +233,8 @@
 				C17DB576155BC0B9008A3837 /* payload.h in Headers */,
 				C17DB578155BC0B9008A3837 /* sessionSpec.h in Headers */,
 				C17DB57A155BC0B9008A3837 /* transport.h in Headers */,
-				C12741D115A477580083F3A9 /* SpecTools.h in Headers */,
-				C18DF26D15A6ED6600094128 /* SdpConversor.h in Headers */,
+				C1BFFC1F161AE550000F535D /* SdpConversor.h in Headers */,
+				C1BFFC21161AE550000F535D /* SpecTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/dist\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"";
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/dist\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"\n\n# Copy headers files\ncd ${PROJECT_DIR}/gen-cocoa\nfind . -name '*.h' | cpio -pdl \"${FRAMEWORK}/Headers\"\n\ncd ${PROJECT_DIR}/mediaspec-tools\nfind . -name '*.h' | cpio -pdl \"${FRAMEWORK}/Headers\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -439,8 +413,8 @@
 				C17DB577155BC0B9008A3837 /* payload.m in Sources */,
 				C17DB579155BC0B9008A3837 /* sessionSpec.m in Sources */,
 				C17DB57B155BC0B9008A3837 /* transport.m in Sources */,
-				C12741D215A477580083F3A9 /* SpecTools.m in Sources */,
-				C18DF26E15A6ED6600094128 /* SdpConversor.m in Sources */,
+				C1BFFC20161AE550000F535D /* SdpConversor.m in Sources */,
+				C1BFFC22161AE550000F535D /* SpecTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
