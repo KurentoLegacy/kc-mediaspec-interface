@@ -293,7 +293,11 @@ select_minor(int32_t a, int32_t b) {
 	KisTransportRtp *rtp = [SpecTools createTransportRtpCopy:transport.rtp];
 	KisTransportRtmp *rtmp = [SpecTools createTransportRtmpCopy:transport.rtmp];
 	
-	return [[KisTransport alloc]initWithRtp:rtp rtmp:rtmp];
+	KisTransport *transportCopy = [[KisTransport alloc] init];
+	[transportCopy setRtp:rtp];
+	[transportCopy setRtmp:rtmp];
+
+	return transportCopy;
 }
 
 + (KisTransportRtp*)createTransportRtpCopy:(KisTransportRtp*)rtp {

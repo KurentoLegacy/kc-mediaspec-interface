@@ -32,7 +32,8 @@
 			NSSet *types = [NSSet setWithObject:[NSNumber numberWithInt:MediaType_VIDEO]];
 			
 			KisTransportRtp *tRtp = [[KisTransportRtp alloc] initWithAddress:@"127.0.0.1" port:2221];
-			KisTransport *transport = [[KisTransport alloc] initWithRtp:tRtp rtmp:nil];
+			KisTransport *transport = [[KisTransport alloc] init];
+			[transport setRtp:tRtp];
 			
 			KisPayloadRtp *payRtp = [SpecTools createPayloadRtpWithId:96 codecName:@"H263-1998" clockRate:90000];
 			[payRtp setBitrate:384];
@@ -53,7 +54,8 @@
 			NSSet *types = [NSSet setWithObject:[NSNumber numberWithInt:MediaType_AUDIO]];
 			
 			KisTransportRtp *tRtp = [[KisTransportRtp alloc] initWithAddress:@"127.0.0.1" port:3331];
-			KisTransport *transport = [[KisTransport alloc] initWithRtp:tRtp rtmp:nil];
+			KisTransport *transport = [[KisTransport alloc] init];
+			[transport setRtp:tRtp];
 			
 			KisPayloadRtp *payRtp = [SpecTools createPayloadRtpWithId:8 codecName:@"PCMA" clockRate:90000];
 			KisPayload *pay = [[KisPayload alloc] initWithRtp:payRtp];

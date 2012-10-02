@@ -578,7 +578,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/protocol",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/transport",
+				);
 				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -595,7 +600,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kis-mediaspec-test/kis-mediaspec-test-Prefix.pch";
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/protocol",
+					"${PROJECT_DIR}/build/thrift-ios/dist/Thrift.framework/Headers/transport",
+				);
 				INFOPLIST_FILE = "kis-mediaspec-test/kis-mediaspec-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
