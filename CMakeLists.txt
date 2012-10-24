@@ -6,8 +6,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic -Wall -std=c99")
 
 find_package(PkgConfig)
 
-pkg_check_modules(THRIFT REQUIRED thrift>=0.8.0)
-pkg_check_modules(THRIFTC REQUIRED thrift_c_glib>=0.8.0)
+pkg_check_modules(THRIFT REQUIRED thrift>=0.9.0)
+pkg_check_modules(THRIFTC REQUIRED thrift_c_glib>=0.9.0)
 
 if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
 	execute_process(COMMAND git describe --abbrev=6 --tags --dirty --always
