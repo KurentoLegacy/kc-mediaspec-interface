@@ -358,7 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=\"thrift-0.8.0\"\nDIR=\"${PROJECT_DIR}/build/thrift-ios\"\nif [ ! -d ${DIR} ]; then\n  git clone ssh://git@repository.kurento.com/kis/thrift-ios.git ${DIR}\nfi\ncd $DIR\nif ! git show-ref --tags --quiet --verify \"refs/tags/${VERSION}\"; then\n  cd ${DIR}\n  git checkout master\n  git pull\n  git pull --tags\nfi\n\ngit checkout ${VERSION}";
+			shellScript = "VERSION=\"thrift-0.9.0\"\nDIR=\"${PROJECT_DIR}/build/thrift-ios\"\nif [ ! -d ${DIR} ]; then\n  git clone ssh://git@repository.kurento.com/kis/thrift-ios.git ${DIR}\nfi\ncd $DIR\nif ! git show-ref --tags --quiet --verify \"refs/tags/${VERSION}\"; then\n  cd ${DIR}\n  git checkout master\n  git pull\n  git pull --tags\nfi\n\ngit checkout ${VERSION}";
 		};
 		C1425477155BF74300D069BE /* Build Static Lib */ = {
 			isa = PBXShellScriptBuildPhase;
