@@ -311,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "STANDALONE_DIR=\"${PROJECT_DIR}/standalone\"\nFRAMEWORKS_DIR=\"${STANDALONE_DIR}/frameworks\"\nHEADERS_DIR=\"${STANDALONE_DIR}/headers\"\nBUILD_DIR=\"${PROJECT_DIR}/build\"\n\nrm -fr ${STANDALONE_DIR}\nmkdir -p ${FRAMEWORKS_DIR}\nmkdir -p ${HEADERS_DIR}\n\n#Copy frameworks\ncd ${FRAMEWORKS_DIR} &&\ncp -r ${BUILD_DIR}/thrift-ios/dist/*.framework . &&\ncp -r ${PROJECT_DIR}/dist/*.framework .\n\n#Copy headers\ncd ${HEADERS_DIR} &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/protocol/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/transport/*.h .\n";
+			shellScript = "STANDALONE_DIR=\"${PROJECT_DIR}/dist/standalone\"\nFRAMEWORKS_DIR=\"${STANDALONE_DIR}/frameworks\"\nHEADERS_DIR=\"${STANDALONE_DIR}/headers\"\nBUILD_DIR=\"${PROJECT_DIR}/build\"\n\nrm -fr ${STANDALONE_DIR}\nmkdir -p ${FRAMEWORKS_DIR}\nmkdir -p ${HEADERS_DIR}\n\n#Copy frameworks\ncd ${FRAMEWORKS_DIR} &&\ncp -r ${BUILD_DIR}/thrift-ios/dist/*.framework . &&\ncp -r ${PROJECT_DIR}/dist/*.framework .\n\n#Copy headers\ncd ${HEADERS_DIR} &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/protocol/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/transport/*.h .\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -519,6 +519,7 @@
 				C1F5B422165CFB7700DD8B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
