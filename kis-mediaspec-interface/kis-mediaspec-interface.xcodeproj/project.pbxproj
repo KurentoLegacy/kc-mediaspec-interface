@@ -409,14 +409,14 @@
 		C142547B155D0A1300D069BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = KisMediaSpec;
+				PRODUCT_NAME = KisMediaSpecInterface;
 			};
 			name = Debug;
 		};
 		C142547C155D0A1300D069BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = KisMediaSpec;
+				PRODUCT_NAME = KisMediaSpecInterface;
 			};
 			name = Release;
 		};
