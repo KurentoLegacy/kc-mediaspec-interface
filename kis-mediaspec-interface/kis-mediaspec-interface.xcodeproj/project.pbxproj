@@ -31,6 +31,18 @@
 			name = "kis-mediaspec-interface-framework";
 			productName = "kis-mediaspec-framework";
 		};
+		C1F5B420165CFB7700DD8B04 /* kis-mediaspec-interface-standalone */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C1F5B423165CFB7700DD8B04 /* Build configuration list for PBXAggregateTarget "kis-mediaspec-interface-standalone" */;
+			buildPhases = (
+				C1F5B427165CFB8300DD8B04 /* Build Standalone */,
+			);
+			dependencies = (
+				C1F5B426165CFB7E00DD8B04 /* PBXTargetDependency */,
+			);
+			name = "kis-mediaspec-interface-standalone";
+			productName = "kis-mediaspec-interface-standalone";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -53,6 +65,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C142546F155BF58D00D069BE;
 			remoteInfo = "thrift-ios-dependency";
+		};
+		C1F5B425165CFB7E00DD8B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C103A139155A9AB5001472BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1425479155D0A1300D069BE;
+			remoteInfo = "kis-mediaspec-interface-framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -204,6 +223,7 @@
 				C142546F155BF58D00D069BE /* thrift-ios-dependency */,
 				C103A141155A9AB6001472BD /* kis-mediaspec-interface */,
 				C1425479155D0A1300D069BE /* kis-mediaspec-interface-framework */,
+				C1F5B420165CFB7700DD8B04 /* kis-mediaspec-interface-standalone */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +299,20 @@
 			shellPath = /bin/sh;
 			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${PROJECT_DIR}/dist\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Resources\" &&\n\n# Generate universal binary for the device and simulator.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\nmv \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}\"\n\n# Copy headers files\ncd ${PROJECT_DIR}/gen-cocoa\nfind . -name '*.h' | cpio -pdl \"${FRAMEWORK}/Headers\"\n";
 		};
+		C1F5B427165CFB8300DD8B04 /* Build Standalone */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Standalone";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "STANDALONE_DIR=\"${PROJECT_DIR}/standalone\"\nFRAMEWORKS_DIR=\"${STANDALONE_DIR}/frameworks\"\nHEADERS_DIR=\"${STANDALONE_DIR}/headers\"\nBUILD_DIR=\"${PROJECT_DIR}/build\"\n\nrm -fr ${STANDALONE_DIR}\nmkdir -p ${FRAMEWORKS_DIR}\nmkdir -p ${HEADERS_DIR}\n\n#Copy frameworks\ncd ${FRAMEWORKS_DIR} &&\ncp -r ${BUILD_DIR}/thrift-ios/dist/*.framework . &&\ncp -r ${PROJECT_DIR}/dist/*.framework .\n\n#Copy headers\ncd ${HEADERS_DIR} &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/protocol/*.h . &&\ncp ${BUILD_DIR}/thrift-ios/dist/Thrift.framework/Headers/transport/*.h .\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -300,6 +334,11 @@
 			isa = PBXTargetDependency;
 			target = C142546F155BF58D00D069BE /* thrift-ios-dependency */;
 			targetProxy = C1425473155BF59900D069BE /* PBXContainerItemProxy */;
+		};
+		C1F5B426165CFB7E00DD8B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1425479155D0A1300D069BE /* kis-mediaspec-interface-framework */;
+			targetProxy = C1F5B425165CFB7E00DD8B04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,6 +459,20 @@
 			};
 			name = Release;
 		};
+		C1F5B421165CFB7700DD8B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C1F5B422165CFB7700DD8B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,6 +511,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C1F5B423165CFB7700DD8B04 /* Build configuration list for PBXAggregateTarget "kis-mediaspec-interface-standalone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F5B421165CFB7700DD8B04 /* Debug */,
+				C1F5B422165CFB7700DD8B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
