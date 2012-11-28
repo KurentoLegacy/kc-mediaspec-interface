@@ -186,6 +186,7 @@
 			buildConfigurationList = C103A14F155A9AB6001472BD /* Build configuration list for PBXNativeTarget "kis-mediaspec-interface" */;
 			buildPhases = (
 				C103A1A2155BAF66001472BD /* Generate Stub Files from Thrift */,
+				C110008016660C6D00FA1416 /* Add Headers Pattern */,
 				C103A13E155A9AB6001472BD /* Sources */,
 				C103A13F155A9AB6001472BD /* Frameworks */,
 				C103A140155A9AB6001472BD /* Headers */,
@@ -241,7 +242,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=$PATH:/usr/local/bin\nfor f in ${PROJECT_DIR}/../src/main/thrift/*\ndo\n    thrift -gen cocoa $f\ndone";
+			shellScript = "PATH=$PATH:/usr/local/bin\nfor f in ${PROJECT_DIR}/../src/main/thrift/*\ndo\n    thrift -gen cocoa $f\ndone\n";
+		};
+		C110008016660C6D00FA1416 /* Add Headers Pattern */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Add Headers Pattern";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "function add_header_pattern() {\n    line_down=\"__\"\n    x=$(echo $1 | tr '[:lower:]' '[:upper:]')\n    x=$(echo $x|sed 's/\\./_/g')\n    x=$(echo $line_down$x$line_down)\n    echo -e \"\\n#ifndef $x\\n#define $x\\n\" > .tmp\n    cat $1 >> .tmp\n    echo -e \"\\n#endif /* $x */\\n\" >> .tmp\n    mv .tmp $1\n}\n\ncd ${PROJECT_DIR}/gen-cocoa\nfor f in *.h; do\n  add_header_pattern $f;\ndone";
 		};
 		C1425475155BF5A200D069BE /* Update source */ = {
 			isa = PBXShellScriptBuildPhase;
